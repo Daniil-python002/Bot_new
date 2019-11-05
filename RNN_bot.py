@@ -186,7 +186,7 @@ def send_text(message):
     decisions = ''
     if message.text.lower() == 'прогноз' or message.text.lower() == 'да':
         sparser.DataUpdate()
-        geostorm_dataset = SunDataset(csv_file="C:\\Users\\даниил\\Google Диск\\Colab Notebooks\\dataset(13)-v3.csv")
+        geostorm_dataset = SunDataset(csv_file="dataset13-v3.csv")
         data_real = DataLoader(geostorm_dataset, shuffle = False, drop_last=False, batch_size = 7)
 
         rnn1 = RNN2(13, 940, 180, 940, 180, 5)
@@ -195,11 +195,11 @@ def send_text(message):
         rnn4 = RNN6(13, 327, 374, 0, 0, 0, 0, 5)
         rnn5 = RNN1(13, 79, 123, 11, 0, 0, 0, 5)
 
-        rnn1.load_state_dict(torch.load("C:\\Users\\даниил\\Google Диск\\Colab Notebooks\\model\\best model\\rnn5.2.2"))
-        rnn2.load_state_dict(torch.load("C:\\Users\\даниил\\Google Диск\\Colab Notebooks\\model\\best model\\rnn5.5.2"))
-        rnn3.load_state_dict(torch.load("C:\\Users\\даниил\\Google Диск\\Colab Notebooks\\model\\best model\\rnn5.7.2"))
-        rnn4.load_state_dict(torch.load("C:\\Users\\даниил\\Google Диск\\Colab Notebooks\\model\\best model\\rnn5.6.2"))
-        rnn5.load_state_dict(torch.load("C:\\Users\\даниил\\Google Диск\\Colab Notebooks\\model\\best model\\rnn5.1.2"))                                
+        rnn1.load_state_dict(torch.load("model\\best model\\rnn5.2.2"))
+        rnn2.load_state_dict(torch.load("model\\best model\\rnn5.5.2"))
+        rnn3.load_state_dict(torch.load("model\\best model\\rnn5.7.2"))
+        rnn4.load_state_dict(torch.load("model\\best model\\rnn5.6.2"))
+        rnn5.load_state_dict(torch.load("model\\best model\\rnn5.1.2"))                                
 
         accuracy1 = [0.7377238590410168, 0.35359116022099446, 0.0, 0.0, 0.0]
         accuracy2 = [0.3125361062969382, 0.20994475138121546, 0.1, 0.15384615384615385, 0.0] 
