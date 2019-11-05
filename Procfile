@@ -1,0 +1,1 @@
+worker: python RNN_bot(1).py
