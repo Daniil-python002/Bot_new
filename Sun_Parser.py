@@ -193,7 +193,7 @@ def Dict_Generator(keys, values):
 
 
 def DataUpdate():
-    Data = pd.read_csv("C:\\Users\\даниил\\Google Диск\\Colab Notebooks\\dataset(13)-v3.csv", sep = ';', engine='python')
+    Data = pd.read_csv("dataset13-v3.csv", sep = ';', engine='python')
     tstart = str(int(Data["Year"][len(Data)-1]))+'/'+    str(int(Data["Month"][len(Data)-1]))+'/'+    str(int(Data["Day"][len(Data)-1]))+' 23:59:59.000'
     tend = dt.datetime.now()
     print(tend)
@@ -232,7 +232,7 @@ def DataUpdate():
                                value5_2,\
                                value5_3])
             Data = Data.append(data, ignore_index=True, sort = False) 
-        Data.to_csv('C:\\Users\\даниил\\Google Диск\\Colab Notebooks\\dataset(13)-v3.csv', sep=';', index = False)
+        Data.to_csv('dataset13-v3.csv', sep=';', index = False)
     pass
 
 
