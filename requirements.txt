@@ -1,7 +1,5 @@
 numpy==1.16.0
 progressbar==2.5
-PyQt5==5.12
-PyQt5-sip==4.19.14
 pyTelegramBotAPI==3.6.6
 sunpy==1.0.2
 beautifulsoup4==4.6.3
